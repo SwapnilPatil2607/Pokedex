@@ -1,0 +1,126 @@
+body {
+  background-color: #2f3542;
+}
+nav {
+  text-align: center;
+}
+#home {
+  color: white;
+  background-color: #ea2027;
+  font-family: "Goldman", cursive;
+  height: 38px;
+  padding: 0px 100px;
+  border: none;
+  border-radius: 3px;
+}
+#home:hover {
+  background-color: #ff0008;
+}
+#pokeball {
+  opacity: 0.6;
+  height: 450px;
+  margin: 110px 470px;
+  animation-name: throw;
+  animation-duration: 1s;
+}
+#pokemon {
+  height: 300px;
+  position: absolute;
+  top: 140px;
+  left: 440px;
+  animation-name: choose;
+  animation-duration: 1.5s;
+}
+@keyframes choose {
+  from {
+    height: 250px;
+    opacity: 0.5;
+    top: 150px;
+    left: 460px;
+  }
+  to {
+    opacity: 1;
+    top: 140px;
+    left: 440px;
+  }
+}
+@keyframes throw {
+  from {
+    opacity: 1;
+    margin: 100px 460px;
+  }
+  to {
+    opacity: 0.6;
+    margin: 110px 470px;
+  }
+}
+#pokedex {
+  height: 400px;
+  margin: 40px 380px;
+}
+#dex {
+  top: 885px;
+  left: 440px;
+  padding: 0px 35px;
+  position: absolute;
+  background-color: #3498db;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 20px;
+  line-height: 5px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 420px) {
+  #pokeball {
+    opacity: 0.6;
+    height: 300px;
+    margin: 110px 70px;
+    animation-name: throw;
+    animation-duration: 1s;
+  }
+  @keyframes throw {
+    from {
+      opacity: 1;
+      margin: 100px 60px;
+    }
+    to {
+      opacity: 0.6;
+      margin: 110px 70px;
+    }
+  }
+  #pokemon {
+    height: 150px;
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    animation-name: choose;
+    animation-duration: 1.5s;
+  }
+  @keyframes choose {
+    from {
+      height: 150px;
+      opacity: 0.5;
+      top: 190px;
+      left: 110px;
+    }
+    to {
+      opacity: 1;
+      top: 180px;
+      left: 100px;
+    }
+  }
+  #pokedex {
+    height: 200px;
+    margin: 0px 40px;
+  }
+  #dex {
+    top: 630px;
+    left: 75px;
+    padding: 0px 20px;
+    position: absolute;
+    background-color: #3498db;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 10px;
+    line-height: 3px;
+  }
+}
